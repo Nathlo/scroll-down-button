@@ -9,6 +9,7 @@
 html {
   font-family: "Poppins", sans-serif;
   font-size: 40px;
+  scroll-behavior: smooth; /* not compatible with all browsers */
 }
 
 section {
@@ -17,6 +18,13 @@ section {
   align-items: center;
   width: 100%;
   min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #sec-1 {
@@ -30,13 +38,19 @@ section {
   color: cornsilk;
 }
 
+i {
+  margin: 20px;
+  font-size: 85px;
+  opacity: 0.6;
+}
+
 .scroll-down {
   position: absolute;
   left: 50%;
   bottom: 20px;
   width: 30px;
   height: 50px;
-  border: 2px solid black;
+  border: 2px solid lightslategray;
   border-radius: 50px;
   cursor: pointer;
   /* transform: translateX(-50%); */
@@ -50,7 +64,7 @@ section {
   left: 50%;
   width: 10px;
   height: 10px;
-  border: 2px solid black;
+  border: 2px solid lightslategray;
   transform: translate(-50%, -50%) rotate(45deg);
   border-top: transparent;
   border-left: transparent;
